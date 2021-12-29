@@ -4,15 +4,11 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <RootNamespace>$(MSBuildProjectName.Replace(" ", "_").Replace(".Interfaces",""))</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <Folder Include="EventSourcing\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\EagleSabi.Infrastructure.Interfaces\EagleSabi.Infrastructure.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>
