@@ -1,4 +1,4 @@
-﻿using EagleSabi.Common.Abstractions.EventSourcing.Dependencies;
+﻿using EagleSabi.Common.Abstractions.Common.Dependencies;
 using EagleSabi.Common.Abstractions.EventSourcing.Models;
 using EagleSabi.Common.Abstractions.EventSourcing.Records;
 

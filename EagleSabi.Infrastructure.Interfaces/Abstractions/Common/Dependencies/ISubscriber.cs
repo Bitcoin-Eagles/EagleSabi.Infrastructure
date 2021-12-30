@@ -1,4 +1,4 @@
-﻿namespace EagleSabi.Common.Abstractions.EventSourcing.Dependencies;
+﻿namespace EagleSabi.Common.Abstractions.Common.Dependencies;
 
 public interface ISubscriber<TMessage>
 {

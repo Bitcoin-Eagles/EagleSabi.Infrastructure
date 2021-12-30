@@ -1,7 +1,7 @@
 ﻿using System;
 using EagleSabi.Common.Abstractions.EventSourcing.Modules;
-using EagleSabi.Infrastructure.EventSourcing;
 using EagleSabi.Infrastructure.EventSourcing.Modules;
+using EagleSabi.Infrastructure.Tests.Integration.Mocks;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace EagleSabi.Infrastructure.Tests.Integration.Helpers;
@@ -13,8 +13,11 @@ public static class Builder
 
     public static ServiceProvider BuildServiceProvider() =>
         new ServiceCollection()
-            .AddEventSourcing()
-            .AddInMemoryEventStore()
-            .AddScoped<IEventRepository, InMemoryEventRepository>()
+            .AddInfrastructureInMemory()
+            .AddTestDomain()
+            .AddScoped<TestEventStore>()
+            .AddScoped<IEventStore>(a => a.GetRequiredService<TestEventStore>())
+            .AddScoped<InMemoryEventRepository>()
+            .AddScoped<IEventRepository>(a => a.GetRequiredService<InMemoryEventRepository>())
             .BuildServiceProvider();
 }
