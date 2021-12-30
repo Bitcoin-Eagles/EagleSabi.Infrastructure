@@ -8,11 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="EventSourcing\" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EagleSabi.Infrastructure.Interfaces\EagleSabi.Infrastructure.Interfaces.csproj" />
+    <ProjectReference Include="..\EagleSabi.Infrastructure.Interfaces\EagleSabi.Common.csproj" />
   </ItemGroup>
 
 </Project>
