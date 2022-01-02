@@ -55,6 +55,8 @@ public static class Helpers
     /// Then throws AggregateException containing all exceptions if any.
     /// Unpacks one level of AggregateException thrown from an action.
     /// </summary>
+    /// <exception cref="OperationCanceledException">if <paramref name="cancellationToken"/> requested cancellation</exception>
+    /// <exception cref="ObjectDisposedException">if <paramref name="cancellationToken"/> is disposed</exception>
     public static async Task AggregateExceptionsAsync(string message, params Func<Task>[] tasks)
     {
         await AggregateExceptionsAsync(tasks.AsEnumerable(), message).ConfigureAwait(false);
@@ -65,6 +67,8 @@ public static class Helpers
     /// Then throws AggregateException containing all exceptions if any.
     /// Unpacks one level of AggregateException thrown from an action.
     /// </summary>
+    /// <exception cref="OperationCanceledException">if <paramref name="cancellationToken"/> requested cancellation</exception>
+    /// <exception cref="ObjectDisposedException">if <paramref name="cancellationToken"/> is disposed</exception>
     public static async Task AggregateExceptionsAsync(params Func<Task>[] tasks)
     {
         await AggregateExceptionsAsync(tasks.AsEnumerable()).ConfigureAwait(false);
@@ -75,13 +79,14 @@ public static class Helpers
     /// Then throws AggregateException containing all exceptions if any.
     /// Unpacks one level of AggregateException thrown from an action.
     /// </summary>
+    /// <exception cref="OperationCanceledException">if <paramref name="cancellationToken"/> requested cancellation</exception>
+    /// <exception cref="ObjectDisposedException">if <paramref name="cancellationToken"/> is disposed</exception>
     public static async Task AggregateExceptionsAsync(IEnumerable<Func<Task>> tasks, string? message = null, CancellationToken cancellationToken = default)
     {
         var exceptions = new List<Exception>();
         foreach (var task in tasks)
         {
-            if (cancellationToken.IsCancellationRequested)
-                throw new TaskCanceledException(null, null, cancellationToken);
+            cancellationToken.ThrowIfCancellationRequested();
             try { await task.Invoke().ConfigureAwait(false); }
             catch (AggregateException excp)
             {

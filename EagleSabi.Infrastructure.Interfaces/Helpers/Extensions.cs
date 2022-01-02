@@ -13,7 +13,7 @@ public static class Extensions
     /// containing all exceptions if any. Unpacks one level of AggregateException
     /// thrown from an action.
     /// </summary>
-    public static void ForEachAggregateExceptions<T>(this IEnumerable<T> list, Action<T> action, string? message = null)
+    public static void ForEachAggregatingExceptions<T>(this IEnumerable<T> list, Action<T> action, string? message = null)
     {
         Helpers.AggregateExceptions(list.Select(a => (Action)(() => action(a))), message);
     }
@@ -24,7 +24,9 @@ public static class Extensions
     /// containing all exceptions if any. Unpacks one level of AggregateException
     /// thrown from an action.
     /// </summary>
-    public static async Task ForEachAggregateExceptionsAsync<T>(this IEnumerable<T> list, Func<T, Task> action, string? message = null, CancellationToken cancellationToken = default)
+    /// <exception cref="OperationCanceledException">if <paramref name="cancellationToken"/> requested cancellation</exception>
+    /// <exception cref="ObjectDisposedException">if <paramref name="cancellationToken"/> is disposed</exception>
+    public static async Task ForEachAggregatingExceptionsAsync<T>(this IEnumerable<T> list, Func<T, Task> action, string? message = null, CancellationToken cancellationToken = default)
     {
         await Helpers.AggregateExceptionsAsync(
             list.Select(a => (Func<Task>)(async () => await action.Invoke(a).ConfigureAwait(false))),

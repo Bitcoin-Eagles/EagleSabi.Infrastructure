@@ -20,7 +20,7 @@ public class PubSub : IPubSub
 
         if (Subscribers.TryGetValue(typeof(TMessage), out var subscribers))
         {
-            await subscribers.ForEachAggregateExceptionsAsync(a => a.Invoke(message!))
+            await subscribers.ForEachAggregatingExceptionsAsync(a => a.Invoke(message!))
                 .ConfigureAwait(false);
         }
     }
