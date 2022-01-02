@@ -55,8 +55,6 @@ public static class Helpers
     /// Then throws AggregateException containing all exceptions if any.
     /// Unpacks one level of AggregateException thrown from an action.
     /// </summary>
-    /// <exception cref="OperationCanceledException">if <paramref name="cancellationToken"/> requested cancellation</exception>
-    /// <exception cref="ObjectDisposedException">if <paramref name="cancellationToken"/> is disposed</exception>
     public static async Task AggregateExceptionsAsync(string message, params Func<Task>[] tasks)
     {
         await AggregateExceptionsAsync(tasks.AsEnumerable(), message).ConfigureAwait(false);
@@ -67,8 +65,6 @@ public static class Helpers
     /// Then throws AggregateException containing all exceptions if any.
     /// Unpacks one level of AggregateException thrown from an action.
     /// </summary>
-    /// <exception cref="OperationCanceledException">if <paramref name="cancellationToken"/> requested cancellation</exception>
-    /// <exception cref="ObjectDisposedException">if <paramref name="cancellationToken"/> is disposed</exception>
     public static async Task AggregateExceptionsAsync(params Func<Task>[] tasks)
     {
         await AggregateExceptionsAsync(tasks.AsEnumerable()).ConfigureAwait(false);
