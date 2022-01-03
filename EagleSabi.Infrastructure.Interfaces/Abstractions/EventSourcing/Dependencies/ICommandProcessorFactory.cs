@@ -1,6 +1,4 @@
-﻿using EagleSabi.Common.Abstractions.EventSourcing.Dependencies;
-
-namespace EagleSabi.Common.Abstractions.EventSourcing.Factories;
+﻿namespace EagleSabi.Common.Abstractions.EventSourcing.Dependencies;
 
 public interface ICommandProcessorFactory
 {

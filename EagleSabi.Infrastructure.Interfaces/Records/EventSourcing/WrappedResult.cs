@@ -1,6 +1,6 @@
 ﻿using EagleSabi.Common.Abstractions.EventSourcing.Models;
 
-namespace EagleSabi.Common.Abstractions.EventSourcing.Records;
+namespace EagleSabi.Common.Records.EventSourcing;
 
 /// <summary>
 /// Result of successfully processed and persisted command.

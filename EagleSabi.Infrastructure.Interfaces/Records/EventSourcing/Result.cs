@@ -2,7 +2,7 @@
 using EagleSabi.Common.Abstractions.EventSourcing.Models;
 using EagleSabi.Common.Helpers;
 
-namespace EagleSabi.Common.Abstractions.EventSourcing.Records;
+namespace EagleSabi.Common.Records.EventSourcing;
 
 /// <summary>
 /// Domain command result

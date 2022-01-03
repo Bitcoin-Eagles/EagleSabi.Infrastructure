@@ -1,5 +1,5 @@
 ﻿using EagleSabi.Common.Abstractions.Common.Modules;
-using EagleSabi.Common.Abstractions.EventSourcing.Factories;
+using EagleSabi.Common.Abstractions.EventSourcing.Dependencies;
 using EagleSabi.Infrastructure.Common.Modules;
 using EagleSabi.Infrastructure.Common.Services;
 using EagleSabi.Infrastructure.Tests.Integration._Mocks.TestDomain;

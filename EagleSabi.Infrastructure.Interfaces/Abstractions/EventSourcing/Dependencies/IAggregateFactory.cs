@@ -1,6 +1,6 @@
 ﻿using EagleSabi.Common.Abstractions.EventSourcing.Models;
 
-namespace EagleSabi.Common.Abstractions.EventSourcing.Factories;
+namespace EagleSabi.Common.Abstractions.EventSourcing.Dependencies;
 
 public interface IAggregateFactory
 {

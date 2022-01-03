@@ -1,7 +1,7 @@
 ﻿using EagleSabi.Common.Abstractions.Common.Dependencies;
 using EagleSabi.Common.Abstractions.Common.Modules;
 using EagleSabi.Common.Abstractions.EventSourcing.Modules;
-using EagleSabi.Common.Abstractions.EventSourcing.Records;
+using EagleSabi.Common.Records.EventSourcing;
 
 namespace EagleSabi.Common.Helpers;
 

@@ -1,5 +1,5 @@
 using System;
-using EagleSabi.Common.Abstractions.EventSourcing.Factories;
+using EagleSabi.Common.Abstractions.EventSourcing.Dependencies;
 using EagleSabi.Common.Abstractions.EventSourcing.Models;
 using EagleSabi.Common.Exceptions;
 

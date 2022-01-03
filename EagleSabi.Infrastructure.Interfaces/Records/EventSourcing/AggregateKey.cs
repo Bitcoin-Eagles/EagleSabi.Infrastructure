@@ -1,3 +1,3 @@
-﻿namespace EagleSabi.Common.Abstractions.EventSourcing.Records;
+﻿namespace EagleSabi.Common.Records.EventSourcing;
 
 public record AggregateKey(string AggregateType, string AggregateId);

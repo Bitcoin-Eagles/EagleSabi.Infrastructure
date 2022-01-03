@@ -1,6 +1,6 @@
 ﻿using EagleSabi.Common.Abstractions.Common.Dependencies;
 
-namespace EagleSabi.Common.Records.EventSourcing;
+namespace EagleSabi.Common.Records.Common;
 
 public record Subscriber<TMessage>(Func<TMessage, Task> SubscriberCallback) : Subscriber, ISubscriber<TMessage>
 {

@@ -1,6 +1,6 @@
 ﻿using EagleSabi.Common.Abstractions.EventSourcing.Models;
 
-namespace EagleSabi.Common.Abstractions.EventSourcing.Records;
+namespace EagleSabi.Common.Records.EventSourcing;
 
 public record WrappedEvent<TEvent>(
     string AggregateType,

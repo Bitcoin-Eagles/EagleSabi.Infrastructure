@@ -1,5 +1,5 @@
 ﻿using EagleSabi.Common.Abstractions.EventSourcing.Models;
-using EagleSabi.Common.Abstractions.EventSourcing.Records;
+using EagleSabi.Common.Records.EventSourcing;
 
 namespace EagleSabi.Common.Abstractions.EventSourcing.Modules;
 

@@ -1,7 +1,7 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using EagleSabi.Common.Abstractions.EventSourcing.Factories;
+using EagleSabi.Common.Abstractions.EventSourcing.Dependencies;
 using EagleSabi.Common.Abstractions.EventSourcing.Modules;
 using EagleSabi.Infrastructure.EventSourcing.Modules;
 

@@ -1,8 +1,7 @@
 ﻿using System.Collections.Immutable;
-using EagleSabi.Common.Abstractions.EventSourcing.Factories;
+using EagleSabi.Common.Abstractions.EventSourcing.Dependencies;
 using EagleSabi.Common.Abstractions.EventSourcing.Models;
 using EagleSabi.Common.Abstractions.EventSourcing.Modules;
-using EagleSabi.Common.Abstractions.EventSourcing.Records;
 using EagleSabi.Common.Exceptions;
 using EagleSabi.Common.Helpers;
 using EagleSabi.Common.Records.EventSourcing;

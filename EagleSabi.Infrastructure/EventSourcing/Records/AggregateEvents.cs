@@ -1,5 +1,5 @@
 ﻿using System.Collections.Immutable;
-using EagleSabi.Common.Abstractions.EventSourcing.Records;
+using EagleSabi.Common.Records.EventSourcing;
 
 namespace EagleSabi.Infrastructure.EventSourcing.Records;
 
