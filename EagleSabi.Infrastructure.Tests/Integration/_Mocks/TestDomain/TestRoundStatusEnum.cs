@@ -1,4 +1,4 @@
-namespace EagleSabi.Infrastructure.Tests.Integration.Mocks.TestDomain
+namespace EagleSabi.Infrastructure.Tests.Integration._Mocks.TestDomain
 {
     public enum TestRoundStatusEnum
     {

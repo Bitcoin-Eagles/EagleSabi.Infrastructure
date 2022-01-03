@@ -5,7 +5,7 @@ using EagleSabi.Common.Abstractions.EventSourcing.Factories;
 using EagleSabi.Common.Abstractions.EventSourcing.Modules;
 using EagleSabi.Infrastructure.EventSourcing.Modules;
 
-namespace EagleSabi.Infrastructure.Tests.Integration.Mocks;
+namespace EagleSabi.Infrastructure.Tests.Integration._Mocks;
 
 public class TestEventStore : EventStore, IDisposable
 {

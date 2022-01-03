@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace EagleSabi.Infrastructure.Tests.Common.Exceptions;
+namespace EagleSabi.Infrastructure.Tests._Common.Exceptions;
 
 public class TestException : Exception
 {

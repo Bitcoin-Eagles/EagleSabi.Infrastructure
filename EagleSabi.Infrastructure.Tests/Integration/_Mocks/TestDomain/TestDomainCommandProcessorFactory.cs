@@ -3,7 +3,7 @@ using EagleSabi.Common.Abstractions.EventSourcing.Dependencies;
 using EagleSabi.Common.Abstractions.EventSourcing.Factories;
 using EagleSabi.Common.Exceptions;
 
-namespace EagleSabi.Infrastructure.Tests.Integration.Mocks.TestDomain
+namespace EagleSabi.Infrastructure.Tests.Integration._Mocks.TestDomain
 {
     internal class TestDomainCommandProcessorFactory : ICommandProcessorFactory
     {

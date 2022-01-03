@@ -1,7 +1,7 @@
 using System.Collections.Immutable;
 using EagleSabi.Common.Abstractions.EventSourcing.Models;
 
-namespace EagleSabi.Infrastructure.Tests.Integration.Mocks.TestDomain
+namespace EagleSabi.Infrastructure.Tests.Integration._Mocks.TestDomain
 {
     internal class TestRoundAggregate : IAggregate
     {

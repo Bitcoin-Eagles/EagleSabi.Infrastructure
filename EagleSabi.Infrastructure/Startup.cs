@@ -1,6 +1,7 @@
 ﻿using EagleSabi.Common.Abstractions.Common.Modules;
 using EagleSabi.Common.Abstractions.EventSourcing.Modules;
 using EagleSabi.Infrastructure.Common.Modules;
+using EagleSabi.Infrastructure.Common.Services;
 using EagleSabi.Infrastructure.EventSourcing.Modules;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -21,7 +22,8 @@ public static class Startup
     public static IServiceCollection AddCommon(this IServiceCollection services) =>
         services
             .AddScoped<IPubSub, PubSub>()
-            .AddSingleton<IBackgroundTaskQueue, BackgroundTaskQueue>();
+            .AddSingleton<IBackgroundTaskQueue, BackgroundTaskQueue>()
+            .AddHostedService<QueuedHostedService>();
 
     public static IServiceCollection AddEventSourcing(this IServiceCollection services) =>
         services

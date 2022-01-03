@@ -6,7 +6,7 @@ using EagleSabi.Common.Abstractions.EventSourcing.Models;
 using EagleSabi.Common.Abstractions.EventSourcing.Records;
 using EagleSabi.Common.Records.EventSourcing;
 
-namespace EagleSabi.Infrastructure.Tests.Integration.Mocks.TestDomain
+namespace EagleSabi.Infrastructure.Tests.Integration._Mocks.TestDomain
 {
     public class TestRoundCommandProcessor : ICommandProcessor
     {
