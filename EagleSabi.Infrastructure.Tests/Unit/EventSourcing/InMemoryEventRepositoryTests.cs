@@ -10,7 +10,7 @@ using EagleSabi.Common.Exceptions;
 using EagleSabi.Common.Helpers;
 using EagleSabi.Infrastructure.Tests._Common.Exceptions;
 using EagleSabi.Infrastructure.Tests.Integration._Mocks;
-using EagleSabi.Infrastructure.Tests.Unit.Mocks;
+using EagleSabi.Infrastructure.Tests.Unit._Mocks;
 using Shouldly;
 using Xunit;
 using Xunit.Abstractions;

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using EagleSabi.Infrastructure.EventSourcing.Modules;
 using Xunit.Abstractions;
 
-namespace EagleSabi.Infrastructure.Tests.Unit.Mocks;
+namespace EagleSabi.Infrastructure.Tests.Unit._Mocks;
 
 public class TestInMemoryEventRepository : InMemoryEventRepository, IDisposable
 {
