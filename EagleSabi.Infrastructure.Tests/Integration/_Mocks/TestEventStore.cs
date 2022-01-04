@@ -12,8 +12,9 @@ public class TestEventStore : EventStore, IDisposable
     public TestEventStore(
         IEventRepository eventRepository,
         IAggregateFactory aggregateFactory,
-        ICommandProcessorFactory commandProcessorFactory)
-        : base(eventRepository, aggregateFactory, commandProcessorFactory)
+        ICommandProcessorFactory commandProcessorFactory,
+        IEventPubSub? eventPusher)
+        : base(eventRepository, aggregateFactory, commandProcessorFactory, eventPusher)
     {
     }
 
