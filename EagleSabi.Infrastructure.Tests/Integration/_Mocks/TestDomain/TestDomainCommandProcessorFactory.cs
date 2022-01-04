@@ -1,6 +1,6 @@
 using System;
-using EagleSabi.Common.Abstractions.EventSourcing.Dependencies;
-using EagleSabi.Common.Exceptions;
+using EagleSabi.Infrastructure.Common.Abstractions.EventSourcing.Dependencies;
+using EagleSabi.Infrastructure.Common.Exceptions;
 
 namespace EagleSabi.Infrastructure.Tests.Integration._Mocks.TestDomain
 {

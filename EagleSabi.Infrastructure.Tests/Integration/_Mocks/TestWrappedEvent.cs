@@ -1,6 +1,6 @@
 using System;
-using EagleSabi.Common.Abstractions.EventSourcing.Models;
-using EagleSabi.Common.Records.EventSourcing;
+using EagleSabi.Infrastructure.Common.Abstractions.EventSourcing.Models;
+using EagleSabi.Infrastructure.Common.Records.EventSourcing;
 
 namespace EagleSabi.Infrastructure.Tests.Integration._Mocks
 {

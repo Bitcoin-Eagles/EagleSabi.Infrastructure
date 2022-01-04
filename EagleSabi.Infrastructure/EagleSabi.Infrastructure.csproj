@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EagleSabi.Infrastructure.Interfaces\EagleSabi.Common.csproj" />
+    <ProjectReference Include="..\EagleSabi.Infrastructure.Common\EagleSabi.Infrastructure.Common.csproj" />
   </ItemGroup>
 
 </Project>

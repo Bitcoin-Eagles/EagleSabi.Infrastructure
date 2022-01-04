@@ -2,8 +2,8 @@
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using EagleSabi.Common.Exceptions;
-using EagleSabi.Common.Records.EventSourcing;
+using EagleSabi.Infrastructure.Common.Exceptions;
+using EagleSabi.Infrastructure.Common.Records.EventSourcing;
 using EagleSabi.Infrastructure.Tests.Integration._Helpers;
 using EagleSabi.Infrastructure.Tests.Integration._Mocks;
 using EagleSabi.Infrastructure.Tests.Integration._Mocks.TestDomain;

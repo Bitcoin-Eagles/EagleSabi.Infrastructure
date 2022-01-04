@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
-using EagleSabi.Common.Abstractions.EventSourcing.Dependencies;
-using EagleSabi.Common.Abstractions.EventSourcing.Models;
-using EagleSabi.Common.Records.EventSourcing;
+using EagleSabi.Infrastructure.Common.Abstractions.EventSourcing.Dependencies;
+using EagleSabi.Infrastructure.Common.Abstractions.EventSourcing.Models;
+using EagleSabi.Infrastructure.Common.Records.EventSourcing;
 
 namespace EagleSabi.Infrastructure.Tests.Integration._Mocks.TestDomain
 {

@@ -1,5 +1,5 @@
 ﻿using System.Threading.Channels;
-using EagleSabi.Common.Abstractions.Common.Modules;
+using EagleSabi.Infrastructure.Common.Abstractions.Common.Modules;
 
 namespace EagleSabi.Infrastructure.Common.Modules;
 

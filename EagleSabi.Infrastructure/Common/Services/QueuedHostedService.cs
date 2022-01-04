@@ -1,4 +1,4 @@
-﻿using EagleSabi.Common.Abstractions.Common.Modules;
+﻿using EagleSabi.Infrastructure.Common.Abstractions.Common.Modules;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
