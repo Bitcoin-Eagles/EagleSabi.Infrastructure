@@ -1,4 +1,7 @@
-﻿using EagleSabi.Common.Abstractions.EventSourcing.Dependencies;
+﻿using EagleSabi.Common.Abstractions.Common.Modules;
+using EagleSabi.Common.Abstractions.EventSourcing.Dependencies;
+using EagleSabi.Infrastructure.Common.Modules;
+using EagleSabi.Infrastructure.Common.Services;
 using EagleSabi.Infrastructure.Tests.Integration._Mocks.TestDomain;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -11,5 +14,7 @@ public static class Startup
             .AddScoped<IAggregateFactory, TestDomainAggregateFactory>()
             .AddScoped<ICommandProcessorFactory, TestDomainCommandProcessorFactory>()
             .AddScoped<TestScope>()
-            .AddLogging();
+            .AddScoped<IBackgroundTaskQueue, BackgroundTaskQueue>()
+            .AddLogging()
+            .AddScoped<QueuedHostedService>();
 }
