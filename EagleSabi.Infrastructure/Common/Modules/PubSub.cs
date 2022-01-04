@@ -1,7 +1,7 @@
 ﻿using System.Collections.Concurrent;
-using EagleSabi.Common.Abstractions.Common.Dependencies;
-using EagleSabi.Common.Abstractions.Common.Modules;
-using EagleSabi.Common.Helpers;
+using EagleSabi.Infrastructure.Common.Abstractions.Common.Dependencies;
+using EagleSabi.Infrastructure.Common.Abstractions.Common.Modules;
+using EagleSabi.Infrastructure.Common.Helpers;
 
 namespace EagleSabi.Infrastructure.Common.Modules;
 

@@ -1,9 +1,9 @@
-﻿using EagleSabi.Common.Abstractions.Common.Dependencies;
-using EagleSabi.Common.Abstractions.Common.Modules;
-using EagleSabi.Common.Abstractions.EventSourcing.Models;
-using EagleSabi.Common.Abstractions.EventSourcing.Modules;
-using EagleSabi.Common.Helpers;
-using EagleSabi.Common.Records.EventSourcing;
+﻿using EagleSabi.Infrastructure.Common.Abstractions.Common.Dependencies;
+using EagleSabi.Infrastructure.Common.Abstractions.Common.Modules;
+using EagleSabi.Infrastructure.Common.Abstractions.EventSourcing.Models;
+using EagleSabi.Infrastructure.Common.Abstractions.EventSourcing.Modules;
+using EagleSabi.Infrastructure.Common.Helpers;
+using EagleSabi.Infrastructure.Common.Records.EventSourcing;
 
 namespace EagleSabi.Infrastructure.EventSourcing.Modules;
 

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
-using EagleSabi.Common.Abstractions.Common.Modules;
-using EagleSabi.Common.Records.Common;
+using EagleSabi.Infrastructure.Common.Abstractions.Common.Modules;
 using EagleSabi.Infrastructure.Common.Modules;
+using EagleSabi.Infrastructure.Common.Records.Common;
 using EagleSabi.Infrastructure.Tests._Common.Exceptions;
 using EagleSabi.Infrastructure.Tests.Unit._Mocks.Messages;
 using Shouldly;

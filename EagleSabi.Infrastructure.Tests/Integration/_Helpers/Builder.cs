@@ -1,6 +1,6 @@
 ﻿using System;
-using EagleSabi.Common.Abstractions.EventSourcing.Modules;
-using EagleSabi.Common.Exceptions;
+using EagleSabi.Infrastructure.Common.Abstractions.EventSourcing.Modules;
+using EagleSabi.Infrastructure.Common.Exceptions;
 using EagleSabi.Infrastructure.EventSourcing.Modules;
 using EagleSabi.Infrastructure.Tests.Integration._Mocks;
 using Microsoft.Extensions.DependencyInjection;

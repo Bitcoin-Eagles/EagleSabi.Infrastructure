@@ -1,6 +1,6 @@
 ﻿using System;
-using EagleSabi.Common.Abstractions.Common.Modules;
-using EagleSabi.Common.Abstractions.EventSourcing.Modules;
+using EagleSabi.Infrastructure.Common.Abstractions.Common.Modules;
+using EagleSabi.Infrastructure.Common.Abstractions.EventSourcing.Modules;
 using EagleSabi.Infrastructure.Common.Services;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;

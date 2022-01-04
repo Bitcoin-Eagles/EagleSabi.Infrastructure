@@ -1,4 +1,4 @@
-using EagleSabi.Common.Abstractions.EventSourcing.Models;
+using EagleSabi.Infrastructure.Common.Abstractions.EventSourcing.Models;
 
 namespace EagleSabi.Infrastructure.Tests.Integration._Mocks.TestDomain
 {

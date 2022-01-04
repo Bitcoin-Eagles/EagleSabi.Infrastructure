@@ -1,8 +1,8 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using EagleSabi.Common.Abstractions.EventSourcing.Dependencies;
-using EagleSabi.Common.Abstractions.EventSourcing.Modules;
+using EagleSabi.Infrastructure.Common.Abstractions.EventSourcing.Dependencies;
+using EagleSabi.Infrastructure.Common.Abstractions.EventSourcing.Modules;
 using EagleSabi.Infrastructure.EventSourcing.Modules;
 
 namespace EagleSabi.Infrastructure.Tests.Integration._Mocks;
