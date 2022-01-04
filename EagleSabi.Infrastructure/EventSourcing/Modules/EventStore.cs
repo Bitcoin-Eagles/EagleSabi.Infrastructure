@@ -17,17 +17,20 @@ public class EventStore : IEventStore
     private IEventRepository EventRepository { get; init; }
     private IAggregateFactory AggregateFactory { get; init; }
     private ICommandProcessorFactory CommandProcessorFactory { get; init; }
+    private IEventPubSub? EventPubSub { get; init; }
 
     #endregion Dependencies
 
     public EventStore(
         IEventRepository eventRepository,
         IAggregateFactory aggregateFactory,
-        ICommandProcessorFactory commandProcessorFactory)
+        ICommandProcessorFactory commandProcessorFactory,
+        IEventPubSub? eventPubSub)
     {
         EventRepository = eventRepository;
         AggregateFactory = aggregateFactory;
         CommandProcessorFactory = commandProcessorFactory;
+        EventPubSub = eventPubSub;
     }
 
     /// <inheritdoc />
@@ -125,7 +128,8 @@ public class EventStore : IEventStore
         }
         if (result?.Success == true)
         {
-            // TODO: Publish to message bus
+            if (EventPubSub is not null)
+                await EventPubSub.PublishAllInBackgroundQueueAsync().ConfigureAwait(false);
 
             await Published().ConfigureAwait(false); // No action
 

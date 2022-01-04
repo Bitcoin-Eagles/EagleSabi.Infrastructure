@@ -27,7 +27,8 @@ public static class Startup
 
     public static IServiceCollection AddEventSourcing(this IServiceCollection services) =>
         services
-            .AddScoped<IEventStore, EventStore>();
+            .AddScoped<IEventStore, EventStore>()
+            .AddScoped<IEventPubSub, EventPubSub>();
 
     public static IServiceCollection AddInMemoryEventRepository(this IServiceCollection services) =>
         services
