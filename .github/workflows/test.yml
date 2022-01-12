@@ -35,6 +35,7 @@ jobs:
 
     - name: Test
       run: dotnet test --no-build --logger "console;verbosity=detailed" --collect:"XPlat Code Coverage" --logger trx
+      continue-on-error: true
 
     - uses: actions/upload-artifact@v2
       with:
