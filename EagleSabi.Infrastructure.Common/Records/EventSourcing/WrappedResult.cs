@@ -7,6 +7,6 @@ namespace EagleSabi.Infrastructure.Common.Records.EventSourcing;
 /// </summary>
 public record WrappedResult(
     long LastSequenceId,
-    IReadOnlyList<WrappedEvent> NewEvents,
+    IReadOnlyList<WrappedEvent> Events,
     IState State,
     bool IdempotenceIdDuplicate = false);

@@ -73,15 +73,15 @@ public class EventStore : IEventStore
         var lastEvent = events.Count > 0 ? events[^1] : null;
         var sequenceId = lastEvent == null ? 0 : lastEvent.SequenceId;
 
-        bool commandAlreadyProcessed = events.Any(ev => ev.SourceId == command.IdempotenceId);
-        if (commandAlreadyProcessed)
-        {
+        var idempotentEvents = events.Where(ev => ev.SourceId == command.IdempotenceId).ToImmutableList();
+
+        // If command is already processed
+        if (0 < idempotentEvents.Count)
             return new WrappedResult(
                 sequenceId,
-                ImmutableList<WrappedEvent>.Empty,
+                idempotentEvents,
                 aggregate.State,
                 IdempotenceIdDuplicate: true);
-        }
 
         if (!CommandProcessorFactory.TryCreate(aggregateType, out var processor))
             throw new AssertionFailedException($"CommandProcessor is missing for aggregate type '{aggregateType}'.");
