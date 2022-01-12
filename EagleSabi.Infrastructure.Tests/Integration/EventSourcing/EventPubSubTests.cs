@@ -46,7 +46,7 @@ public class EventPubSubTests : IAsyncLifetime
         await Scope.BackgroundTaskQueue.WaitAsync(TimeoutCancellation);
 
         // Assert
-        receivedEvents.ShouldBe(result.NewEvents);
+        receivedEvents.ShouldBe(result.Events);
     }
 
     [Fact]

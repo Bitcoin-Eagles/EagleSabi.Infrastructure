@@ -37,7 +37,7 @@ public class EventStoreTests : IDisposable
         var result = await Scope.EventStore.ProcessCommandAsync(command, nameof(TestRoundAggregate), "1");
 
         // Assert
-        Assert.NotEmpty(result.NewEvents);
+        Assert.NotEmpty(result.Events);
         Assert.True(result.LastSequenceId > 0);
 
         Assert.NotEmpty(await Scope.EventRepository.ListEventsAsync(nameof(TestRoundAggregate), "1"));
@@ -117,13 +117,13 @@ public class EventStoreTests : IDisposable
 
         // result1 is conflicted by IdempotenceId (result2 went in)
         Assert.True(result1?.IdempotenceIdDuplicate);
-        Assert.Equal(0, result1?.NewEvents.Count);
+        Assert.Equal(1, result1?.Events.Count);
         Assert.Equal(2, result1?.LastSequenceId);
         Assert.NotNull(result1?.State);
 
         // result2 is appended
         Assert.False(result2?.IdempotenceIdDuplicate);
-        Assert.Equal(1, result2?.NewEvents.Count);
+        Assert.Equal(1, result2?.Events.Count);
         Assert.Equal(2, result2?.LastSequenceId);
         Assert.NotNull(result2?.State);
     }
@@ -167,7 +167,7 @@ public class EventStoreTests : IDisposable
 
         // result1 is conflicted and retried after result2
         Assert.False(result1?.IdempotenceIdDuplicate);
-        Assert.Equal(1, result1?.NewEvents.Count);
+        Assert.Equal(1, result1?.Events.Count);
         Assert.Equal(3, result1?.LastSequenceId);
         Assert.NotNull(result1?.State);
         Assert.IsType<TestRoundState>(result1?.State);
@@ -175,7 +175,7 @@ public class EventStoreTests : IDisposable
 
         // result2 is appended first
         Assert.False(result2?.IdempotenceIdDuplicate);
-        Assert.Equal(1, result2?.NewEvents.Count);
+        Assert.Equal(1, result2?.Events.Count);
         Assert.Equal(2, result2?.LastSequenceId);
         Assert.NotNull(result2?.State);
         Assert.IsType<TestRoundState>(result2?.State);
